@@ -136,7 +136,8 @@ public class MetodosOrdenamiento {
     }
 
     // Método de inserción con errores
-    // Error encontrado:
+    // Error encontrado: en el while  deberia ser i >=0 y arreglo[i]>key
+    //Solucion: cambiar los simbolos
     public int[] insercionPrimero(int[] arregloOriginal) {
 
         int[] arreglo = Arrays.copyOf(arregloOriginal, arregloOriginal.length);
@@ -161,9 +162,9 @@ public class MetodosOrdenamiento {
         for (int j = 1; j < arreglo.length; j++) {
             int actual = arreglo[j];
 
-            int i = j - 1;
-            for (; j >= 0 && arreglo[j] > actual; j--) {
-                arreglo[j + 1] = arreglo[j];
+            int i;
+            for (i = j - 1; i >= 0 && arreglo[i] > actual; i--) {
+                arreglo[i + 1] = arreglo[i];
             }
             arreglo[i + 1] = actual;
         }
