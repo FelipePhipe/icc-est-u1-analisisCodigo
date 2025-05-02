@@ -1,4 +1,4 @@
-class metodos_ordenamiento:
+class MetodosOrdenamiento:
     def metodo_sort_bubble(self, array):
         arreglo = array.copy()
         n = len(arreglo)
